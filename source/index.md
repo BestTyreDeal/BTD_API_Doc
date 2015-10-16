@@ -122,7 +122,7 @@ cursor (optional)  | 0    | Offset for results.
             "product_image": "://besttyredeal.com/images/someimage.jpg",
             "product_mrp": "2907.0000",
             "product_currency": "INR",
-            "product_description": "<p><strong>FUEL EFFICIENCY:</strong>Reduce rolling resistance.Improved fuel efficiency.</p>\r\n\r\n<p><strong>LOW NOISE:</strong>Designed to reduce noise.</p>\r\n\r\n<p><strong>BRAKING:</strong>Excellent braking capability.Increased safety.</p>",
+            "product_description": "Fuel efficient. Superior tyre life.",
             "product_url": "http://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
@@ -162,6 +162,88 @@ Parameter | Default | Description
 api_key    | none | The api key provided by BTD.
 productid  | none | The productid of user selected product. ("product_id")
 supplierid | none | The supplierid of user selected product. ("sup_id")
+
+#Supplier
+
+## Get all suppliers for product
+
+```shell
+ curl -i "http://api.besttyredeal.com/api/v1/product/suppliers?apikey=apikey&productid=69"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "status": 200,
+    "content": {
+        "product": {
+            "product_id": "69",
+            "product_name": "S322 Tyre Tube",
+            "product_size": "P 145/70R 12 69S TT",
+            "product_image": "://besttyredeal.com/images/someimage.jpg",
+            "product_mrp": "2907.0000",
+            "product_currency": "INR",
+            "product_description": "Fuel efficient. Superior tyre life.",
+            "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_btd_offer": "",
+            "product_discount": "6",
+            "product_brand_offer": ""
+        },
+        "manufacturer": {
+            "manu_name": "Bridgestone",
+            "manu_image": "://besttyredeal.com/images/someimage.jpg"
+        },
+        "suppliers": [
+            {
+                "sup_id": "1",
+                "sup_price": "2430",
+                "sup_qty": "50",
+                "sup_location": "MG Road Sikanderpur",
+                "sup_offers": " PICKUP & DELIVERY",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-19 11:47:52"
+            },
+            {
+                "sup_id": "2",
+                "sup_price": "2430",
+                "sup_qty": "50",
+                "sup_location": "",
+                "sup_offers": " PICKUP & DELIVERY",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-19 11:47:52"
+            },
+            {
+                "sup_id": "56",
+                "sup_price": "2425",
+                "sup_qty": "50",
+                "sup_location": "DLF Cyber City",
+                "sup_offers": "COMPLIMENTARY GIFT",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-21 17:57:18"
+            }
+        ]
+    }
+}
+```
+
+This endpoint fetches list of all the suppliers who are selling product with given **productid**.
+
+### HTTP Request
+
+`GET http://api.besttyredeal.com/api/v1/product/suppliers`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+productid | The ID of the product to find all suppliers for
 
 #Orders
 
