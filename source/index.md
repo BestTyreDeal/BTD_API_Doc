@@ -88,13 +88,11 @@ Currently the API is not available for public access. Only specific organization
 }
 ```
 
-This endpoint retrieves all products. 
-
-`Required paramters : pincode, apikey | Optional parameters : limit [Default = 30], cursor [Default = 0]`
+This endpoint retrieves all products. The required params are **pincode**, **apikey**. Optional params are **limit** [Default = 30], **cursor** [Default = 0]
 
 ### HTTP Request
 
-`GET "http://api.besttyredeal.com/api/v1/products`
+`GET "http://api.besttyredeal.com/api/v1/products"`
 
 ### Query Parameters
 
@@ -143,7 +141,7 @@ cursor (optional)  | 0    | Offset for results.
         },
         "manufacturer": {
             "manu_name": "Bridgestone",
-            "manu_image": "://besttyredeal.com/images/someimage.jpg",
+            "manu_image": "://besttyredeal.com/images/someimage.jpg"
         }
     }
 }
@@ -155,7 +153,7 @@ This endpoint retrieves information of single product. Lookup is done using **pr
 
 ### HTTP Request
 
-`GET "http://api.besttyredeal.com/api/v1/product/lookup`
+`GET "http://api.besttyredeal.com/api/v1/product/lookup"`
 
 ### Query Parameters
 

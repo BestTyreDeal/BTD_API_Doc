@@ -29,6 +29,7 @@ activate :relative_assets
 set :relative_links, true
 
 # Build Configuration
+set :build_dir, '../finalbuild/slate/api'
 configure :build do
   activate :minify_css
   activate :minify_javascript
