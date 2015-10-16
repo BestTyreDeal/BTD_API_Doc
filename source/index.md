@@ -45,6 +45,8 @@ Currently the API is not available for public access. Only specific organization
             "product_currency": "INR",
             "product_description": "Fuel efficient. Superior tyre life.",
             "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_btd_offer": "",
+            "product_discount": "6",
             "suppliers": {
                 "fitshop_id": "8",
                 "fitshop_price": "11000",
@@ -62,6 +64,8 @@ Currently the API is not available for public access. Only specific organization
             "product_currency": "INR",
             "product_description": "Fuel efficient. Superior tyre life.",
             "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_btd_offer": "",
+            "product_discount": "6",
             "suppliers": {
                 "fitshop_id": "59",
                 "fitshop_price": "11000",
