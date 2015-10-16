@@ -24,7 +24,7 @@ Currently the API is not available for public access. Only specific organization
 
 # Products
 
-## Get list of products
+## Get all products
 
 ```shell
  curl -i "http://api.besttyredeal.com/api/v1/products?apikey=apikey&pincode=122001&limit=2&cursor=30"
@@ -47,12 +47,17 @@ Currently the API is not available for public access. Only specific organization
             "product_url": "http://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
+            "product_brand_offer": "",
             "suppliers": {
-                "fitshop_id": "8",
-                "fitshop_price": "11000",
-                "fitshop_qty": "50",
-                "fitshop_location": "Subhash Chowk",
-                "fitshop_offers": "Some offer"
+                "sup_id": "8",
+                "sup_price": "11000",
+                "sup_qty": "50",
+                "sup_location": "Subhash Chowk",
+                "sup_offers": " BEST EQUIPPED SHOP",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-17 08:46:23"
             }
         },
         {
@@ -66,12 +71,17 @@ Currently the API is not available for public access. Only specific organization
             "product_url": "http://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
+            "product_brand_offer": "",
             "suppliers": {
-                "fitshop_id": "59",
-                "fitshop_price": "11000",
-                "fitshop_qty": "20",
-                "fitshop_location": "Wazirabad Market",
-                "fitshop_offers": "Some offer"
+                "sup_id": "5",
+                "sup_price": "11000",
+                "sup_qty": "50",
+                "sup_location": "Subhash Chowk",
+                "sup_offers": " BEST EQUIPPED SHOP",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-17 08:46:23"
             }
         }
     ]
@@ -79,8 +89,8 @@ Currently the API is not available for public access. Only specific organization
 ```
 
 This endpoint retrieves all products. 
-Required paramters : pincode, apikey
-Optional parameters : limit [Default = 30], cursor [Default = 0]
+
+`Required paramters : pincode, apikey | Optional parameters : limit [Default = 30], cursor [Default = 0]`
 
 ### HTTP Request
 
@@ -94,6 +104,66 @@ api_key | - | The api key provided by BTD.
 pincode | none | The pincode entered by user looking for sellers nearby.
 limit (optional)   | 30   | Limit the number of results.
 cursor (optional)  | 0    | Offset for results.
+
+## Get single product information
+
+```shell
+ curl -i "http://api.besttyredeal.com/api/v1/product/lookup?apikey=apikey&productid=69&supplierid=1"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "status": 200,
+    "content": {
+        "product": {
+            "product_id": "69",
+            "product_name": "S322 Tyre Tube",
+            "product_size": "P 145/70R 12 69S TT",
+            "product_image": "://besttyredeal.com/images/someimage.jpg",
+            "product_mrp": "2907.0000",
+            "product_currency": "INR",
+            "product_description": "<p><strong>FUEL EFFICIENCY:</strong>Reduce rolling resistance.Improved fuel efficiency.</p>\r\n\r\n<p><strong>LOW NOISE:</strong>Designed to reduce noise.</p>\r\n\r\n<p><strong>BRAKING:</strong>Excellent braking capability.Increased safety.</p>",
+            "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_btd_offer": "",
+            "product_discount": "6",
+            "product_brand_offer": ""
+        },
+        "supplier": {
+            "sup_id": "1",
+            "sup_price": "2430",
+            "sup_qty": "50",
+            "sup_location": "MG Road Sikanderpur",
+            "sup_offers": " PICKUP & DELIVERY",
+            "sup_tyre_exchange": "100",
+            "sup_free_nitrogen": "Yes",
+            "sup_free_alignment": "Yes",
+            "sup_info_updatedat": "2015-09-17 08:46:23"
+        },
+        "manufacturer": {
+            "manu_name": "Bridgestone",
+            "manu_image": "://besttyredeal.com/images/someimage.jpg",
+        }
+    }
+}
+```
+
+This endpoint retrieves information of single product. Lookup is done using **productid** & **supplierid** provided by BTD API via **products** endpoint.
+
+`Required paramters : supplierid, productid, apikey`
+
+### HTTP Request
+
+`GET "http://api.besttyredeal.com/api/v1/product/lookup`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+api_key    | none | The api key provided by BTD.
+productid  | none | The productid of user selected product. ("product_id")
+supplierid | none | The supplierid of user selected product. ("sup_id")
 
 #Orders
 
