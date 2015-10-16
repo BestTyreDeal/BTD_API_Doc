@@ -163,8 +163,6 @@ api_key    | none | The api key provided by BTD.
 productid  | none | The productid of user selected product. ("product_id")
 supplierid | none | The supplierid of user selected product. ("sup_id")
 
-#Supplier
-
 ## Get all suppliers for product
 
 ```shell
