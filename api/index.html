@@ -170,7 +170,7 @@
             </span><span class="nt">"product_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"://besttyredeal.com/images/someimage.jpg"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"product_mrp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2907.0000"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"product_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INR"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"product_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;&lt;strong&gt;FUEL EFFICIENCY:&lt;/strong&gt;Reduce rolling resistance.Improved fuel efficiency.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;LOW NOISE:&lt;/strong&gt;Designed to reduce noise.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;BRAKING:&lt;/strong&gt;Excellent braking capability.Increased safety.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fuel efficient. Superior tyre life."</span><span class="p">,</span><span class="w">
             </span><span class="nt">"product_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://besttyredeal.com/originalproductinfopage"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"product_btd_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
             </span><span class="nt">"product_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
@@ -226,6 +226,94 @@
 <td>supplierid</td>
 <td>none</td>
 <td>The supplierid of user selected product. (&ldquo;sup_id&rdquo;)</td>
+</tr>
+</tbody></table>
+
+<h1 id="supplier">Supplier</h1>
+
+<h2 id="get-all-suppliers-for-product">Get all suppliers for product</h2>
+<pre class="highlight shell"><code> curl -i <span class="s2">"http://api.besttyredeal.com/api/v1/product/suppliers?apikey=apikey&amp;productid=69"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S322 Tyre Tube"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P 145/70R 12 69S TT"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"://besttyredeal.com/images/someimage.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_mrp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2907.0000"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INR"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fuel efficient. Superior tyre life."</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://besttyredeal.com/originalproductinfopage"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_btd_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_brand_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"manu_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bridgestone"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"manu_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"://besttyredeal.com/images/someimage.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"suppliers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"sup_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2430"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MG Road Sikanderpur"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_offers"</span><span class="p">:</span><span class="w"> </span><span class="s2">" PICKUP &amp; DELIVERY"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_tyre_exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_nitrogen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_alignment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_info_updatedat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-19 11:47:52"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"sup_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2430"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_location"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_offers"</span><span class="p">:</span><span class="w"> </span><span class="s2">" PICKUP &amp; DELIVERY"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_tyre_exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_nitrogen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_alignment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_info_updatedat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-19 11:47:52"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"sup_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"56"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2425"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DLF Cyber City"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_offers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COMPLIMENTARY GIFT"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_tyre_exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_nitrogen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_alignment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_info_updatedat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-21 17:57:18"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint fetches list of all the suppliers who are selling product with given <strong>productid</strong>.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.besttyredeal.com/api/v1/product/suppliers</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>productid</td>
+<td>The ID of the product to find all suppliers for</td>
 </tr>
 </tbody></table>
 
