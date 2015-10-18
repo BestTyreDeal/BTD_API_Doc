@@ -243,6 +243,79 @@ Parameter | Description
 --------- | -----------
 productid | The ID of the product to find all suppliers for
 
+#Supplier
+
+## Get all products by supplier
+
+```shell
+ curl -i "http://api.besttyredeal.com/api/v1/supplier/products?apikey=apikey&supplierid=56&limit=2"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "status": 200,
+    "content": {
+        "supplier": {
+            "sup_id": "56",
+            "sup_location": "DLF Cyber City"
+        },
+        "products": [
+            {
+                "product_id": "69",
+                "product_size": "P 145/70R 12 69S TT",
+                "product_image": "://besttyredeal.com/images/someimage.jpg",
+                "product_mrp": "2907.0000",
+                "product_currency": "INR",
+                "product_url": "http://besttyredeal.com/originalproductinfopage",
+                "product_btd_offer": "",
+                "product_discount": "6",
+                "product_brand_offer": "",
+                "sup_price": "2425",
+                "sup_qty": "50",
+                "sup_offers": "COMPLIMENTARY GIFT",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-21 17:57:18"
+            },
+            {
+                "product_id": "70",
+                "product_size": "P 145/80R 12 74S TT",
+                "product_image": "://besttyredeal.com/images/someimage.jpg",
+                "product_mrp": "2731.0000",
+                "product_currency": "INR",
+                "product_url": "http://besttyredeal.com/originalproductinfopage",
+                "product_btd_offer": "",
+                "product_discount": "6",
+                "product_brand_offer": "",
+                "sup_price": "2545",
+                "sup_qty": "50",
+                "sup_offers": "COMPLIMENTARY GIFT",
+                "sup_tyre_exchange": "100",
+                "sup_free_nitrogen": "Yes",
+                "sup_free_alignment": "Yes",
+                "sup_info_updatedat": "2015-09-21 17:57:18"
+            }
+        ]
+    }
+}
+```
+
+This endpoint lets you fetch all the products provided by a supplier with **supplierid**. The **limit** parameter is optional.
+
+### HTTP Request
+
+`GET http://api.besttyredeal.com/api/v1/supplier/products`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+apikey | The api key provided by BTD.
+supplierid | The ID of supplier
+
 #Orders
 
 ## Submit order details to BTD
