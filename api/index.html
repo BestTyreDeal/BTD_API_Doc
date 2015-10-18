@@ -315,6 +315,88 @@
 </tr>
 </tbody></table>
 
+<h1 id="supplier">Supplier</h1>
+
+<h2 id="get-all-products-by-supplier">Get all products by supplier</h2>
+<pre class="highlight shell"><code> curl -i <span class="s2">"http://api.besttyredeal.com/api/v1/supplier/products?apikey=apikey&amp;supplierid=56&amp;limit=2"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"supplier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"sup_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"56"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"sup_location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DLF Cyber City"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P 145/70R 12 69S TT"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"://besttyredeal.com/images/someimage.jpg"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_mrp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2907.0000"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INR"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://besttyredeal.com/originalproductinfopage"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_btd_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_brand_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2425"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_offers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COMPLIMENTARY GIFT"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_tyre_exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_nitrogen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_alignment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_info_updatedat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-21 17:57:18"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"P 145/80R 12 74S TT"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"://besttyredeal.com/images/someimage.jpg"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_mrp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2731.0000"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INR"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://besttyredeal.com/originalproductinfopage"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_btd_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"product_brand_offer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2545"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_offers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COMPLIMENTARY GIFT"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_tyre_exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_nitrogen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_free_alignment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yes"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"sup_info_updatedat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-21 17:57:18"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint lets you fetch all the products provided by a supplier with <strong>supplierid</strong>. The <strong>limit</strong> parameter is optional.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.besttyredeal.com/api/v1/supplier/products</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apikey</td>
+<td>The api key provided by BTD.</td>
+</tr>
+<tr>
+<td>supplierid</td>
+<td>The ID of supplier</td>
+</tr>
+</tbody></table>
+
 <h1 id="orders">Orders</h1>
 
 <h2 id="submit-order-details-to-btd">Submit order details to BTD</h2>
