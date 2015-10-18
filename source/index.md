@@ -98,7 +98,7 @@ This endpoint retrieves all products. The required params are **pincode**, **api
 
 Parameter | Default | Description
 --------- | ------- | -----------
-api_key | - | The api key provided by BTD.
+api_key | none | The api key provided by BTD.
 pincode | none | The pincode entered by user looking for sellers nearby.
 limit (optional)   | 30   | Limit the number of results.
 cursor (optional)  | 0    | Offset for results.
