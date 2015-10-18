@@ -23,13 +23,13 @@ Status (status) | Error Message |Meaning
 
 Content Code (ccode) | Error Message |Meaning
 ---------- | ------- | -------
-404 | 'Content not found' | The requested content could not be found on BTD.
+204 | 'Content not found' | The requested content could not be found on BTD.
 
 ```json
 {
     "status": 200,
     "content": {
-        "ccode": "404",
+        "ccode": "204",
         "ccmessage": "Content not found"
     }
 }

@@ -313,8 +313,9 @@ This endpoint lets you fetch all the products provided by a supplier with **supp
 
 Parameter | Description
 --------- | -----------
-apikey | The api key provided by BTD.
-supplierid | The ID of supplier
+api_key | none | The api key provided by BTD.
+supplierid | none | The ID of supplier.
+limit (optional)   | 30   | Limit the number of results.
 
 #Orders
 
