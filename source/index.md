@@ -27,7 +27,7 @@ Currently the API is not available for public access. Only specific organization
 ## Get all products
 
 ```shell
- curl -i "http://api.besttyredeal.com/api/v1/products?apikey=apikey&pincode=122001&limit=2&cursor=30"
+ curl -i "https://api.besttyredeal.com/api/v1/products?apikey=apikey&pincode=122001&limit=2&cursor=30"
 ```
 
 > The above command returns JSON structured like this:
@@ -44,7 +44,7 @@ Currently the API is not available for public access. Only specific organization
             "product_mrp": "11000.0000",
             "product_currency": "INR",
             "product_description": "Fuel efficient. Superior tyre life.",
-            "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_url": "https://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
             "product_brand_offer": "",
@@ -68,7 +68,7 @@ Currently the API is not available for public access. Only specific organization
             "product_mrp": "11000.0000",
             "product_currency": "INR",
             "product_description": "Fuel efficient. Superior tyre life.",
-            "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_url": "https://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
             "product_brand_offer": "",
@@ -92,7 +92,7 @@ This endpoint retrieves all products. The required params are **pincode**, **api
 
 ### HTTP Request
 
-`GET "http://api.besttyredeal.com/api/v1/products"`
+`GET "https://api.besttyredeal.com/api/v1/products"`
 
 ### Query Parameters
 
@@ -106,7 +106,7 @@ cursor (optional)  | 0    | Offset for results.
 ## Get single product information
 
 ```shell
- curl -i "http://api.besttyredeal.com/api/v1/product/lookup?apikey=apikey&productid=69&supplierid=1"
+ curl -i "https://api.besttyredeal.com/api/v1/product/lookup?apikey=apikey&productid=69&supplierid=1"
 ```
 
 > The above command returns JSON structured like this:
@@ -123,7 +123,7 @@ cursor (optional)  | 0    | Offset for results.
             "product_mrp": "2907.0000",
             "product_currency": "INR",
             "product_description": "Fuel efficient. Superior tyre life.",
-            "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_url": "https://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
             "product_brand_offer": ""
@@ -153,7 +153,7 @@ This endpoint retrieves information of single product. Lookup is done using **pr
 
 ### HTTP Request
 
-`GET "http://api.besttyredeal.com/api/v1/product/lookup"`
+`GET "https://api.besttyredeal.com/api/v1/product/lookup"`
 
 ### Query Parameters
 
@@ -166,7 +166,7 @@ supplierid | none | The supplierid of user selected product. ("sup_id")
 ## Get all suppliers for product
 
 ```shell
- curl -i "http://api.besttyredeal.com/api/v1/product/suppliers?apikey=apikey&productid=69"
+ curl -i "https://api.besttyredeal.com/api/v1/product/suppliers?apikey=apikey&productid=69"
 ```
 
 > The above command returns JSON structured like this:
@@ -183,7 +183,7 @@ supplierid | none | The supplierid of user selected product. ("sup_id")
             "product_mrp": "2907.0000",
             "product_currency": "INR",
             "product_description": "Fuel efficient. Superior tyre life.",
-            "product_url": "http://besttyredeal.com/originalproductinfopage",
+            "product_url": "https://besttyredeal.com/originalproductinfopage",
             "product_btd_offer": "",
             "product_discount": "6",
             "product_brand_offer": ""
@@ -235,7 +235,7 @@ This endpoint fetches list of all the suppliers who are selling product with giv
 
 ### HTTP Request
 
-`GET http://api.besttyredeal.com/api/v1/product/suppliers`
+`GET https://api.besttyredeal.com/api/v1/product/suppliers`
 
 ### URL Parameters
 
@@ -248,7 +248,7 @@ productid | The ID of the product to find all suppliers for
 ## Get all products by supplier
 
 ```shell
- curl -i "http://api.besttyredeal.com/api/v1/supplier/products?apikey=apikey&supplierid=56&limit=2"
+ curl -i "https://api.besttyredeal.com/api/v1/supplier/products?apikey=apikey&supplierid=56&limit=2"
 ```
 
 > The above command returns JSON structured like this:
@@ -268,7 +268,7 @@ productid | The ID of the product to find all suppliers for
                 "product_image": "://besttyredeal.com/images/someimage.jpg",
                 "product_mrp": "2907.0000",
                 "product_currency": "INR",
-                "product_url": "http://besttyredeal.com/originalproductinfopage",
+                "product_url": "https://besttyredeal.com/originalproductinfopage",
                 "product_btd_offer": "",
                 "product_discount": "6",
                 "product_brand_offer": "",
@@ -286,7 +286,7 @@ productid | The ID of the product to find all suppliers for
                 "product_image": "://besttyredeal.com/images/someimage.jpg",
                 "product_mrp": "2731.0000",
                 "product_currency": "INR",
-                "product_url": "http://besttyredeal.com/originalproductinfopage",
+                "product_url": "https://besttyredeal.com/originalproductinfopage",
                 "product_btd_offer": "",
                 "product_discount": "6",
                 "product_brand_offer": "",
@@ -307,7 +307,7 @@ This endpoint lets you fetch all the products provided by a supplier with **supp
 
 ### HTTP Request
 
-`GET http://api.besttyredeal.com/api/v1/supplier/products`
+`GET https://api.besttyredeal.com/api/v1/supplier/products`
 
 ### URL Parameters
 
@@ -324,7 +324,7 @@ limit (optional)   | 30   | Limit the number of results.
 ```shell
  curl -i 
  --data "productid=9&paidamount=2000&supplierid=8&productqty=3&apikey=apikey" 
- "http://api.besttyredeal.com/api/v1/submitorder"
+ "https://api.besttyredeal.com/api/v1/submitorder"
 ```
 
 > The above command returns JSON structured like this:
@@ -340,7 +340,7 @@ This endpoint sends order details from third parties to BTD.
 
 ### HTTP Request
 
-`POST http://api.besttyredeal.com/api/v1/submitorder`
+`POST https://api.besttyredeal.com/api/v1/submitorder`
 
 ### URL Parameters
 
